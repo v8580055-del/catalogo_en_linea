@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-[#f0f4f4] text-cat-brown font-outfit min-h-screen pb-24;
+  }
+}
+
+@layer components {
+  .card-premium {
+    @apply bg-white rounded-[2.5rem] border border-slate-100/50 transition-all duration-300;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04);
+  }
+
+  .btn-action {
+    @apply bg-cat-brown text-white px-6 py-3 rounded-2xl font-semibold flex items-center justify-center gap-2 transition-all active:scale-95 hover:opacity-90;
+  }
+
+  .nav-pill {
+    @apply flex flex-col items-center justify-center gap-1 text-slate-400 transition-colors;
+  }
+
+  .nav-pill-active {
+    @apply text-cat-teal-dark;
+  }
+}
+
+/* Hide scrollbar for cleaner look */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
