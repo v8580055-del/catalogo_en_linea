@@ -40,6 +40,12 @@ jobs:
         run: npm install
       - name: Build
         run: npm run build
+        env:
+          VITE_GOOGLE_CLIENT_ID: ${{ secrets.VITE_GOOGLE_CLIENT_ID }}
+          VITE_GOOGLE_DRIVE_API_KEY: ${{ secrets.VITE_GOOGLE_DRIVE_API_KEY }}
+          VITE_WHATSAPP_NUMBER: ${{ secrets.VITE_WHATSAPP_NUMBER }}
+          VITE_FACEBOOK_PAGE: ${{ secrets.VITE_FACEBOOK_PAGE }}
+          VITE_WHATSAPP_MESSAGE: ${{ secrets.VITE_WHATSAPP_MESSAGE }}
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Upload artifact
